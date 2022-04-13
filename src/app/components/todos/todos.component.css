@@ -1,0 +1,27 @@
+.dialog-title{
+    text-align: center;
+}
+.input-todo-name{
+    width: 100%;
+}
+.select-todo-category{
+    width: 100%;
+}
+.cancel-button-area{
+    width: 49%;
+    padding-right: 1%;
+}
+.accept-button-area{
+    width: 49%;
+    padding-left: 1%;
+}
+.dialog-button-cancel{
+    background-color: gray;
+    color: aliceblue;
+    width: 100%;
+}
+.dialog-button-accept{
+    width: 100%;
+    color: aliceblue;
+    background-color:rgb(58,175,218);
+}

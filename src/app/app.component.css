@@ -1,0 +1,170 @@
+
+  
+main {
+	padding-top: 70px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+	grid-template-rows: repeat(auto-fill, minmax(20%, 1fr));
+	grid-gap: 1rem;
+}
+
+.title {
+	padding: 1rem;
+}
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+}
+body {
+	background-color:rgb(248,248,248);
+  	font-family: 'Roboto', sans-serif;
+	padding: 2rem;
+}
+
+
+.gridMUI{
+	height: 1000px;
+}
+.ptile{
+	left: 0px; width: auto; top: 0px; height: auto;
+}
+
+#headline {
+	z-index: 1;
+	top:0px;
+	left:0px;
+	position: fixed;
+
+	font-size: 11px;
+	width: 100%;
+    padding: 0px;
+    text-align:center;
+    background-color:rgb(58,175,218);
+	box-shadow: 0 0px 1px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#headline h1 {
+    margin:auto;
+    line-height:65px;
+    vertical-align:middle;
+	color: white;
+}
+
+#plus {
+	position: absolute;
+	right: 20px;
+	top: 20%;
+	
+}
+
+#plusbutton {
+	background-color: rgba(28,28,28,0);
+	border: 0ch;
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: all 0.5s;
+  	position: relative;
+}
+#plusbutton::before {
+	content: '';
+  	position: absolute;
+  	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: rgba(28,28,28,0);
+	transition: all 0.3s;
+}
+
+#plusbutton:hover::before {
+	opacity: 0 ;
+	transform: scale(0.5,0.5);
+}
+#plusbutton::after {
+	content: '';
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border: 1px solid rgba(255,255,255,0.5);
+	transform: scale(1.2,1.2);
+}
+#plusbutton:hover::after {
+	opacity: 1;
+  	transform: scale(1,1);
+}
+
+
+#completed {
+	text-decoration: line-through;
+}
+
+#cards {
+	padding-top:80px;
+	
+		  -webkit-box-sizing: border-box;
+     box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+#todoCard {
+
+	margin:10px;
+	background-color:white;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: content-box;
+          box-sizing: content-box;
+
+
+}
+
+#todoCard li {
+	list-style-type: none;
+	font-size: 13px;
+	padding:10px;
+}
+
+#todoCard ul {
+	padding:10px;
+	padding-top:0px;
+}
+
+#todoCard h3 {
+	padding:15px;
+	padding-bottom:0px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+#delimeter {
+	border: 0;
+    height: 0;
+    border-bottom: 1px solid rgba(248, 248, 248, 0.7);
+}
+
+#todoCard ul li span{
+	margin-left:13px;
+}
+
+
+
+
+
+
+

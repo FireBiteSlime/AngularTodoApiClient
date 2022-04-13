@@ -1,0 +1,36 @@
+
+<h3 class="dialog-title">НОВАЯ ЗАДАЧА</h3>
+<hr id="delimeter" noshade>
+<mat-dialog-content [formGroup]="todoForm">
+    <div >
+        <mat-form-field class="input-todo-name" appearance="outline" >
+            <mat-label>Напишите название задачи</mat-label>
+            <input matInput placeholder="Название задачи..." formControlName="text">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field  class="select-todo-category" appearance="outline">
+            <mat-label>Выберите категорию</mat-label>
+            <mat-select formControlName="project_id" placeholder="Категория...">
+                <mat-option  *ngFor="let project of data.projects" [value]="project.id">{{project.title}}</mat-option>
+                <mat-option  [value]="-1">Новая категория</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div *ngIf="todoForm.controls['project_id'].value == -1">
+        <mat-form-field class="input-todo-name" appearance="outline" >
+            <mat-label>Напишите название категории</mat-label>
+            <input matInput placeholder="Название категории..." formControlName="title">
+        </mat-form-field>
+
+    </div> 
+</mat-dialog-content>
+
+<div mat-dialog-actions >
+    <div class="cancel-button-area">
+        <button mat-button class="dialog-button-cancel" (click)="closeDialog()">ОТМЕНА</button>
+    </div>
+    <div class="accept-button-area">
+        <button mat-button  cdkFocusInitial class="dialog-button-accept" (click)="onSubmitForm()">ОК</button>
+    </div>
+</div>
